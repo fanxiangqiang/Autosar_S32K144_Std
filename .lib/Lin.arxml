@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 缂栬緫浣跨敤 XMLSpy v2006 U (http://www.altova.com) 鐢� any (any) -->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>AUTOSAR</SHORT-NAME>
+            <ELEMENTS>
+                <!-- Module Definition: Lin -->
+                <ECUC-MODULE-DEF UUID="ECUC:cce1bea0-f990-4c41-b8fd-2b0f0e590935">
+                    <SHORT-NAME>Lin</SHORT-NAME>
+                    <DESC>
+                        <L-2 L="EN">Configuration of the Lin (LIN driver) module.</L-2>
+                    </DESC>
+                    <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                            <DOC-REVISION>
+                                <REVISION-LABEL>4.2.2</REVISION-LABEL>
+                                <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                                <DATE>2014-10-31</DATE>
+                            </DOC-REVISION>
+                        </DOC-REVISIONS>
+                    </ADMIN-DATA>
+                    <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                    <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                    <POST-BUILD-VARIANT-SUPPORT>true</POST-BUILD-VARIANT-SUPPORT>
+                    <SUPPORTED-CONFIG-VARIANTS>
+                        <SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD</SUPPORTED-CONFIG-VARIANT>
+                        <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+                    </SUPPORTED-CONFIG-VARIANTS>
+                    <CONTAINERS>
+                        <!-- Container Definition: CommonPublishedInformation-->
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:cb79ebdd-beff-4f92-a997-990c0ab58193">
+                            <SHORT-NAME>CommonPublishedInformation</SHORT-NAME>
+                            <ADMIN-DATA>
+                                <SDGS>
+                                    <SDG GID="iSoft::IdentifiableOptions">
+                                    <SD GID="INFORMATION_FLAG">true</SD>
+                                    </SDG>
+                                </SDGS>
+                            </ADMIN-DATA>
+                            <DESC>
+                                <L-2 L="EN">Container for the references to DemEventParameter elements which shall be invoked using the API Dem_ReportErrorStatus API in case the corresponding error occurs. The EventId is taken from the referenced DemEventParameter's DemEventId value. The standardized errors are provided in the container and can be extended by vendor specific error references.</L-2>
+                            </DESC>
+                            <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00188</RELATED-TRACE-ITEM-REF>
+                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                            <PARAMETERS>
+                                <!-- PARAMETER DEFINITION: ArMajorVersion -->
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:6d8fcd10-4bde-4582-99fd-4e98b7c25840">
+                                    <SHORT-NAME>ArMajorVersion</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Specifies the InstanceId of this module instance. If only one instance is present it shall have the Id 0.</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00179</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    <MAX>255</MAX>
+                                    <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <!-- PARAMETER DEFINITION: ArMinorVersion-->
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:6d8fcd10-4bde-4582-99fd-4e98b7c25839">
+                                    <SHORT-NAME>ArMinorVersion</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Specifies the InstanceId of this module instance. If only one instance is present it shall have the Id 0.</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00179</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    <MAX>255</MAX>
+                                    <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <!-- PARAMETER DEFINITION: ArPatchVersion-->
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:4c279681-63d2-4125-b3a0-36aabd53163b">
+                                    <SHORT-NAME>ArPatchVersion</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Specifies the maximum number of loops for blocking function until a timeout is raised in short term wait loops</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00093</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    <MAX>255</MAX>
+                                    <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <!-- PARAMETER DEFINITION: ModuleId-->
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:4c279681-63d2-4125-b3a0-36aabd53173b">
+                                    <SHORT-NAME>ModuleId</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Specifies the maximum number of loops for blocking function until a timeout is raised in short term wait loops</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00093</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    <MAX>255</MAX>
+                                    <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <!-- PARAMETER DEFINITION: Release-->
+                                <ECUC-STRING-PARAM-DEF UUID="ECUC:90188127-bfd2-42e2-aacc-20d2a3284e45">
+                                    <SHORT-NAME>Release</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Defines header files for callback functions which shall be included in case of CDDs. Range of characters is 1.. 32.</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00093</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                    <SCOPE>ECU</SCOPE>
+                                    <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    </MULTIPLICITY-CONFIG-CLASSES>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    <ECUC-STRING-PARAM-DEF-VARIANTS>
+                                    <ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                                    <MAX-LENGTH>32</MAX-LENGTH>
+                                    <MIN-LENGTH>1</MIN-LENGTH>
+                                    </ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                                    </ECUC-STRING-PARAM-DEF-VARIANTS>
+                                </ECUC-STRING-PARAM-DEF>
+                                <!-- PARAMETER DEFINITION: SwMajorVersion-->
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:4c279681-63d2-4125-b3a0-36aabd54173b">
+                                    <SHORT-NAME>SwMajorVersion</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Specifies the maximum number of loops for blocking function until a timeout is raised in short term wait loops</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00093</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    <MAX>255</MAX>
+                                    <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <!-- PARAMETER DEFINITION: SwMinorVersion-->
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:4c279681-63d2-4125-b3a0-36aabd64173b">
+                                    <SHORT-NAME>SwMinorVersion</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Specifies the maximum number of loops for blocking function until a timeout is raised in short term wait loops</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00093</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    <MAX>255</MAX>
+                                    <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <!-- PARAMETER DEFINITION: SwPatchVersion-->
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:4c279681-63d2-4125-b3a0-37aabd64173b">
+                                    <SHORT-NAME>SwPatchVersion</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Specifies the maximum number of loops for blocking function until a timeout is raised in short term wait loops</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00093</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    <MAX>255</MAX>
+                                    <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <!-- PARAMETER DEFINITION: VendorApiInfix-->
+                                <ECUC-STRING-PARAM-DEF UUID="ECUC:90188127-bfd2-42e2-aacc-20d3a3284e45">
+                                    <SHORT-NAME>VendorApiInfix</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Defines header files for callback functions which shall be included in case of CDDs. Range of characters is 1.. 32.</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00093</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                    <SCOPE>ECU</SCOPE>
+                                    <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    </MULTIPLICITY-CONFIG-CLASSES>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    <ECUC-STRING-PARAM-DEF-VARIANTS>
+                                    <ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                                    <MAX-LENGTH>32</MAX-LENGTH>
+                                    <MIN-LENGTH>1</MIN-LENGTH>
+                                    </ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                                    </ECUC-STRING-PARAM-DEF-VARIANTS>
+                                </ECUC-STRING-PARAM-DEF>
+                                <!-- PARAMETER DEFINITION: VendorId -->
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:4c279681-63d2-4125-b3a0-37aabd74173b">
+                                    <SHORT-NAME>VendorId</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Specifies the maximum number of loops for blocking function until a timeout is raised in short term wait loops</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00093</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    <MAX>255</MAX>
+                                    <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                            </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <!-- Container Definition: LinGeneral -->
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:1d543976-f649-42c3-b4ac-ad3abf38201a">
+                            <SHORT-NAME>LinGeneral</SHORT-NAME>
+                            <DESC>
+                                <L-2 L="EN">This container contains the parameters related to each LIN Driver Unit.</L-2>
+                            </DESC>
+                            <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00183</RELATED-TRACE-ITEM-REF>
+                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                            <PARAMETERS>
+                                <!-- PARAMETER DEFINITION: LinCsrClksel-->
+                                <ECUC-ENUMERATION-PARAM-DEF UUID="ECUC:4123162a-06e8-4aa7-856f-43facbc0272d">
+                                    <SHORT-NAME>LinCsrClksel</SHORT-NAME>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>ECU</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    <DEFAULT-VALUE>ASCLINS</DEFAULT-VALUE>
+                                    <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:ca065e19-b247-8fa4-5228-11892ec917cb">
+                                    <SHORT-NAME>ASCLINS</SHORT-NAME>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                                <!-- PARAMETER DEFINITION: LinDevErrorDetect -->
+                                <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:6f7825c9-bce4-4f51-8643-1f8fcef24d80">
+                                    <SHORT-NAME>LinDevErrorDetect</SHORT-NAME>
+                                    <ADMIN-DATA>
+										<SDGS>
+											<SDG GID="iSoft::IdentifiableOptions">
+												<SD GID="TRIGGER_FLAG">true</SD>												
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+                                    <DESC>
+                                    <L-2 L="EN">Switches the Default Error Tracer (Det) detection and notification ON or OFF.</L-2>
+                                    </DESC>
+                                    <INTRODUCTION>
+                                    <P>
+                                    <L-1 L="EN">* true: enabled (ON).
+                                        * false: disabled (OFF).</L-1>
+                                    </P>
+                                    </INTRODUCTION>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00066</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-BOOLEAN-PARAM-DEF>
+                                <!-- PARAMETER DEFINITION: LinHwMcuTrigSleepEnable -->
+                                <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:6f7825c9-bce4-4f51-8743-1f8fcef24d80">
+                                    <SHORT-NAME>LinHwMcuTrigSleepEnable</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Switches the Default Error Tracer (Det) detection and notification ON or OFF.</L-2>
+                                    </DESC>
+                                    <INTRODUCTION>
+                                    <P>
+                                    <L-1 L="EN">* true: enabled (ON).
+                                        * false: disabled (OFF).</L-1>
+                                    </P>
+                                    </INTRODUCTION>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00066</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-BOOLEAN-PARAM-DEF>
+                                <!-- PARAMETER DEFINITION: LinIndex-->
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:6d8fcd10-4bde-4582-99fd-4e98b7c25839">
+                                    <SHORT-NAME>LinIndex</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Specifies the InstanceId of this module instance. If only one instance is present it shall have the Id 0.</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00179</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    <MAX>255</MAX>
+                                    <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <!-- PARAMETER DEFINITION: LinInitDeInitApiMode -->
+                                <ECUC-ENUMERATION-PARAM-DEF UUID="ECUC:4123162a-06e8-4aa7-856f-43facbc0282d">
+                                    <SHORT-NAME>LinInitDeInitApiMode</SHORT-NAME>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>ECU</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    <DEFAULT-VALUE>LIN_MCAL_SUPERVISOR</DEFAULT-VALUE>
+                                    <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:ca065e19-b247-8fa4-5228-11893ec917cb">
+                                    <SHORT-NAME>LIN_MCAL_SUPERVISOR</SHORT-NAME>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                                <!-- PARAMETER DEFINITION: LinInterruptDisabled -->
+                                <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:6f7825c9-bce4-4f51-8743-1f8fcef25d80">
+                                    <SHORT-NAME>LinInterruptDisabled</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Switches the Default Error Tracer (Det) detection and notification ON or OFF.</L-2>
+                                    </DESC>
+                                    <INTRODUCTION>
+                                    <P>
+                                    <L-1 L="EN">* true: enabled (ON).
+                                        * false: disabled (OFF).</L-1>
+                                    </P>
+                                    </INTRODUCTION>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00066</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-BOOLEAN-PARAM-DEF>
+                                <!-- PARAMETER DEFINITION: LinTimeoutDuration -->
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:4c279681-73d2-4125-b3a0-36aabd53153b">
+                                    <SHORT-NAME>LinTimeoutDuration</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Specifies the maximum number of loops for blocking function until a timeout is raised in short term wait loops</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00093</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    <MAX>65535</MAX>
+                                    <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <!-- PARAMETER DEFINITION: LinVersionInfoApi -->
+                                <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:03f6c9e1-e3b7-4907-84c0-a96e099b4431">
+                                    <SHORT-NAME>LinVersionInfoApi</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Switches the Lin_GetVersionInfo function ON or OFF.</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00067</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-BOOLEAN-PARAM-DEF>
+                            </PARAMETERS>
+                            <REFERENCES>
+                                <!-- Symbolic Name Reference Definition: LinSysClockRef -->
+                                <ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="ECUC:8715c30d-96ef-473d-bad1-16e9692c607c">
+                                    <SHORT-NAME>LinSysClockRef</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Reference to the channel definition in the LIN driver.</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinIf_00003</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>ECU</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig_0/McuClockReferencePointConfig</DESTINATION-REF>
+                                </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                            </REFERENCES>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <!-- Container Definition: LinGlobalConfig -->
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:5bf7d5c4-2ce3-45ef-9aa6-694ae888aef1">
+                            <SHORT-NAME>LinGlobalConfig</SHORT-NAME>
+                            <DESC>
+                                <L-2 L="EN">This container contains the global configuration parameter of the Lin driver.</L-2>
+                            </DESC>
+                            <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00184</RELATED-TRACE-ITEM-REF>
+                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                            <SUB-CONTAINERS>
+                                <!-- Container Definition: LinChannel -->
+                                <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:5068d91d-ca0a-460f-9f6a-21f7ad28d591">
+                                    <SHORT-NAME>LinChannel</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">This container contains the configuration (parameters) of the LIN Controller(s).</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00069</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                    <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: LinAutoCalcBaudParams -->
+                                    <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:644aeda6-9c40-4e6d-945f-555f9c2b0c59">
+                                    <SHORT-NAME>LinAutoCalcBaudParams</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Specifies if the LIN hardware channel supports wake up functionality</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00182</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: LinChanAssignedHw-->
+                                    <ECUC-ENUMERATION-PARAM-DEF UUID="ECUC:4123162a-06e8-4aa7-856f-43facbc0276d">
+                                    <SHORT-NAME>LinChanAssignedHw</SHORT-NAME>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>ECU</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    <DEFAULT-VALUE>ASCLIN1</DEFAULT-VALUE>
+                                    <LITERALS>
+
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:ca065e19-b247-8fa4-5228-11892ec917cb">
+                                    <SHORT-NAME>ASCLIN1</SHORT-NAME>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:ca065e19-b247-8fa4-5228-11892ec927cb">
+                                    <SHORT-NAME>ASCLIN2</SHORT-NAME>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    </LITERALS>
+                                    </ECUC-ENUMERATION-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: LinChannelBaudDenominator-->
+                                    <ECUC-INTEGER-PARAM-DEF UUID="ECUC:16748716-3f59-4065-a8ef-ca1ab0b00deb">
+                                    <SHORT-NAME>LinChannelBaudDenominator</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Specifies the baud rate of the LIN channel</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00180</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    <MAX>65535</MAX>
+                                    <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: LinChannelBaudNumerator -->
+                                    <ECUC-INTEGER-PARAM-DEF UUID="ECUC:c3ebc9ff-d623-4c49-ac91-241dec486a8d">
+                                    <SHORT-NAME>LinChannelBaudNumerator</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Identifies the LIN channel. Replaces LIN_CHANNEL_INDEX_NAME from the LIN SWS.</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00181</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                    <MAX>65535</MAX>
+                                    <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: LinChannelBaudPreScalar -->
+                                    <ECUC-INTEGER-PARAM-DEF UUID="ECUC:c3ebc9ff-d623-4c49-ac91-241dec586a8d">
+                                    <SHORT-NAME>LinChannelBaudPreScalar</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Identifies the LIN channel. Replaces LIN_CHANNEL_INDEX_NAME from the LIN SWS.</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00181</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                    <MAX>65535</MAX>
+                                    <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: LinChannelBaudRate-->
+                                    <ECUC-INTEGER-PARAM-DEF UUID="ECUC:c3ebc9ff-d623-4c49-ac91-242dec586a8d">
+                                    <SHORT-NAME>LinChannelBaudRate</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Identifies the LIN channel. Replaces LIN_CHANNEL_INDEX_NAME from the LIN SWS.</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00181</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                    <MAX>65535</MAX>
+                                    <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: LinChannelId-->
+                                    <ECUC-INTEGER-PARAM-DEF UUID="ECUC:c3ebc9ff-d623-4c49-ac91-242dec526a8d">
+                                    <SHORT-NAME>LinChannelId</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Identifies the LIN channel. Replaces LIN_CHANNEL_INDEX_NAME from the LIN SWS.</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00181</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                    <MAX>65535</MAX>
+                                    <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: LinChannelWakeupSupport-->
+                                    <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:644aeda6-9c40-4e6d-945f-555f9c2b0c57">
+                                    <SHORT-NAME>LinChannelWakeupSupport</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Specifies if the LIN hardware channel supports wake up functionality</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00182</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: LinInterByteSpace-->
+                                    <ECUC-INTEGER-PARAM-DEF UUID="ECUC:c3ebc9ff-d623-4c49-ac92-242dec526a8d">
+                                    <SHORT-NAME>LinInterByteSpace</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Identifies the LIN channel. Replaces LIN_CHANNEL_INDEX_NAME from the LIN SWS.</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00181</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                    <MAX>65535</MAX>
+                                    <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: LinRxAlternateInputSignal-->
+                                    <ECUC-ENUMERATION-PARAM-DEF UUID="ECUC:4123162a-06e8-4aa7-856f-44facbc0276d">
+                                    <SHORT-NAME>LinRxAlternateInputSignal</SHORT-NAME>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>ECU</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    <DEFAULT-VALUE>SELECT_C_PORT02_PIN10</DEFAULT-VALUE>
+                                    <LITERALS>
+
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:ca065e19-b247-8fa4-5228-12892ec917cb">
+                                    <SHORT-NAME>SELECT_C_PORT02_PIN10</SHORT-NAME>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:ca065e19-b247-8fa4-5228-12892ec918cb">
+                                    <SHORT-NAME>SELECT_G_PORT02_PIN3</SHORT-NAME>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    </LITERALS>
+                                    </ECUC-ENUMERATION-PARAM-DEF>
+                                    </PARAMETERS>
+                                    <REFERENCES>
+                                    <!-- Reference Definition: LinClockRef -->
+                                    <ECUC-REFERENCE-DEF UUID="ECUC:df926436-58ac-4912-beb2-b6a951d5f244">
+                                    <SHORT-NAME>LinClockRef</SHORT-NAME>
+                                    <DESC>
+                                    <L-2 L="EN">Reference to the LIN clock source configuration, which is set in the MCU driver configuration.</L-2>
+                                    </DESC>
+                                    <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Lin_00094</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <SCOPE>LOCAL</SCOPE>
+                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                    <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    </VALUE-CONFIG-CLASSES>
+                                    <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Lin/LinGlobalConfig/LinChannel/LinClockRef</DESTINATION-REF>
+                                    </ECUC-REFERENCE-DEF>
+                                    </REFERENCES>
+                                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    </CONTAINERS>
+                </ECUC-MODULE-DEF>
+            </ELEMENTS>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>
+
+<!-- ISoft-Module-Version:1.0.0 -->

@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+	<AR-PACKAGES>
+		<AR-PACKAGE>
+			<SHORT-NAME>AUTOSAR</SHORT-NAME>
+			<ELEMENTS>
+				<ECUC-MODULE-DEF UUID="ECUC:13aa2440-e790-4121-9e12-3a380efb0d6b">
+					<SHORT-NAME>Pwm</SHORT-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of Pwm (Pulse Width Modulation) module.</L-2>
+					</DESC>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.2.2</REVISION-LABEL>
+								<ISSUED-BY>AUTOSAR</ISSUED-BY>
+								<DATE>2014-10-31</DATE>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+					<POST-BUILD-VARIANT-SUPPORT>true</POST-BUILD-VARIANT-SUPPORT>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD</SUPPORTED-CONFIG-VARIANT>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<!-- Container Definition: PwmGeneral --><ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:9e045944-b70f-48ae-9745-0344fa64c653">
+							<SHORT-NAME>PwmGeneral</SHORT-NAME>
+							<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00004</RELATED-TRACE-ITEM-REF>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: PwmDevErrorDetect -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:7ee4dbf7-92ca-43f8-bedf-cd012b1d5f01">
+									<SHORT-NAME>PwmDevErrorDetect</SHORT-NAME>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="iSoft::IdentifiableOptions">
+												<SD GID="TRIGGER_FLAG">true</SD>												
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<DESC>
+										<L-2 L="EN">Switches the Default Error Tracer (Det) detection and notification ON or OFF.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">* true: enabled (ON).
+                                        * false: disabled (OFF).</L-1>
+										</P>
+									</INTRODUCTION>
+									<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00131</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:7ee4dbf7-92ca-43f8-bedf-cd012b1d5f02">
+									<SHORT-NAME>PwmChannelCoherentSelection</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Switch for enabling the update of the period / duty parameter at the end of the current period&lt;BR/&gt;
+channel wise. Switching on this parameter obsoletes PwmDutycycleUpdatedEndperiod  and PwmPeriodUpdatedEndperiod. &lt;BR/&gt;</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="iSoft::IdentifiableOptions">
+												<SD GID="TRIGGER_FLAG">true</SD>
+												<SD GID="CONTROL_NAME">Channel Coherent Selection</SD>												
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">* true: enabled (ON).
+                                        * false: disabled (OFF).</L-1>
+										</P>
+									</INTRODUCTION>
+									<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00131</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: PwmDutycycleUpdatedEndperiod -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:873477b1-c07e-4208-b92e-4e1875570984">
+									<SHORT-NAME>PwmDutycycleUpdatedEndperiod</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Switch for enabling the update of the duty cycle parameter at the end of the current period.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="iSoft::IdentifiableOptions">
+												<SD GID="TRIGGER_FLAG">true</SD>
+												<SD GID="CONTROL_NAME">Dutycycle Updated Endperiod</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>									
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">TRUE: update of duty cycle is done at the end of period of currently generated waveform (current waveform is finished).
+                                        FALSE: update of duty cycle is done immediately (just after service call, current waveform is cut).</L-1>
+										</P>
+									</INTRODUCTION>
+									<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00132</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: PwmIndex -->
+								<ECUC-INTEGER-PARAM-DEF UUID="ECUC:1559f6dc-e859-4216-8c88-0f8836ae115e">
+									<SHORT-NAME>PwmIndex</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Specifies the InstanceId of this module instance. If only one instance is present it shall have the Id 0.</L-2>
+									</DESC>
+									<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00139</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>0</MIN>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: PwmLowPowerStatesSupport -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:2abff61e-374e-4c26-bcc6-6486e894e765">
+									<SHORT-NAME>PwmLowPowerStatesSupport</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Adds / removes all power state management related APIs (PWM_SetPowerState, PWM_GetCurrentPowerState, PWM_GetTargetPowerState, PWM_PreparePowerState, PWM_Main_PowerTransitionManager), indicating if the HW offers low power state management.</L-2>
+									</DESC>
+									<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00142</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: PwmNotificationSupported -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:39804e4a-209d-4df8-ade1-4e0cd88cc57d">
+									<SHORT-NAME>PwmNotificationSupported</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Switch to indicate that the notifications are supported</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="iSoft::IdentifiableOptions">
+												<SD GID="TRIGGER_FLAG">true</SD>
+												<SD GID="CONTROL_NAME">Notification Supported</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>									
+									<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00133</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: PwmPeriodUpdatedEndperiod -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:da85e8d7-af3c-4ad4-a700-43ea0462bee4">
+									<SHORT-NAME>PwmPeriodUpdatedEndperiod</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Switch for enabling the update of the period parameter at the end of the current period.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="iSoft::IdentifiableOptions">
+												<SD GID="TRIGGER_FLAG">true</SD>
+												<SD GID="CONTROL_NAME">Period Updated Endperiod</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">TRUE: update of period/duty cycle is done at the end of period of currently generated waveform (current waveform is finished).
+                                        FALSE: update of period/duty cycle is done immediately (just after service call, current waveform is cut).</L-1>
+										</P>
+									</INTRODUCTION>
+									<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00134</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: PwmPowerStateAsynchTransitionMode -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:a510f93f-3393-467e-8c07-090d589c89f6">
+									<SHORT-NAME>PwmPowerStateAsynchTransitionMode</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enables / disables support of the PWM Driver to the asynchronous power state transition.</L-2>
+									</DESC>
+									<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00143</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+							<SUB-CONTAINERS>
+								<!-- Container Definition: PwmPowerStateConfig -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:32734417-2e9b-48db-930e-3df1591c3887">
+									<SHORT-NAME>PwmPowerStateConfig</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Each instance of this parameter defines a power state and the callback to be called when this power state is reached.</L-2>
+									</DESC>
+									<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00144</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: PwmPowerState -->
+										<ECUC-INTEGER-PARAM-DEF UUID="ECUC:ee4c6090-0034-4736-bdd2-7ad86f21e9d3">
+											<SHORT-NAME>PwmPowerState</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Each instance of this parameter describes a different power state supported by the PWM HW. It should be defined by the HW supplier and used by the PWMDriver to reference specific HW configurations which set the PWM HW module in the referenced power state.</L-2>
+											</DESC>
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">At least the power mode corresponding to full power state shall be always configured.</L-1>
+												</P>
+											</INTRODUCTION>
+											<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00146</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<MAX>18446744073709551615</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: PwmPowerStateReadyCbkRef -->
+										<ECUC-FUNCTION-NAME-DEF UUID="ECUC:6e8869ff-d465-40bf-9296-d75dce548e58">
+											<SHORT-NAME>PwmPowerStateReadyCbkRef</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Each instance of this parameter contains a reference to a power mode callback defined in a CDD or IoHwAbs component.</L-2>
+											</DESC>
+											<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00145</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL/>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+									</PARAMETERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF><!-- Container Definition: PwmChannelConfigSet -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:64be7cd3-9cb3-4e87-b679-3a43aaf7f82c">
+							<SHORT-NAME>PwmChannelConfigSet</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">This container contains the configuration parameters and sub containers of the AUTOSAR Pwm module.</L-2>
+							</DESC>
+							<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00140</RELATED-TRACE-ITEM-REF>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<SUB-CONTAINERS>
+								<!-- Container Definition: PwmChannel -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:c2253a76-e0d8-4a8f-b383-ce80ffc0e870">
+									<SHORT-NAME>PwmChannel</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Configuration of an individual PWM channel.</L-2>
+									</DESC>
+									<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00027</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: PwmChannelClass -->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="ECUC:31505abb-2296-4c99-bdb7-d0909f0440f2">
+											<SHORT-NAME>PwmChannelClass</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Class of PWM Channel.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="iSoft::IdentifiableOptions">
+														<SD GID="CONTROL_NAME">Channel Class</SD>
+														<SD GID="TRIGGER_FLAG">true</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>											
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">ImplementationType: Pwm_ChannelClassType</L-1>
+												</P>
+											</INTRODUCTION>
+											<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00136</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:eac1ed7f-8f47-9041-5cc4-d032cfa1e9c3">
+													<SHORT-NAME>PWM_FIXED_PERIOD</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:51a3d877-f893-8ebd-621b-616127ab32cb">
+													<SHORT-NAME>PWM_FIXED_PERIOD_SHIFTED</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:3d41cabe-24c3-9194-59c6-cec177def766">
+													<SHORT-NAME>PWM_VARIABLE_PERIOD</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:3d41cabe-24c3-9194-59c6-cec177def767">
+													<SHORT-NAME>PWM_FIXED_PERIOD_CENTER_ALIGNED</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:3d41cabe-24c3-9194-59c6-cec177def768">
+													<SHORT-NAME>PWM_FIXED_PERIOD_ZERO_SHIFTED</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+											<DEFAULT-VALUE>PWM_VARIABLE_PERIOD</DEFAULT-VALUE>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: PwmChannelId -->
+										<ECUC-INTEGER-PARAM-DEF UUID="ECUC:3a0e3f14-a2b9-428e-9b76-6a361c8b2ea4">
+											<SHORT-NAME>PwmChannelId</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Channel Id of the PWM channel. This value will be assigned to the symbolic name derived of the PwmChannel container short name.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="iSoft::IdentifiableOptions">
+														<SD GID="HIDE_FLAG">true</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>											
+											<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00137</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<MAX>4294967295</MAX>
+											<MIN>0</MIN>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: PwmDutycycleDefault -->
+										<ECUC-INTEGER-PARAM-DEF UUID="ECUC:daa5c051-75d5-4a20-8b6a-ca34afab3ddd">
+											<SHORT-NAME>PwmDutycycleDefault</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Value of duty cycle used for Initialization</L-2>
+											</DESC>
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">0, represents 0% 
+                                                0x8000 represents 100%</L-1>
+												</P>
+											</INTRODUCTION>
+											<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00138</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<MAX>32768</MAX>
+											<MIN>0</MIN>
+											<DEFAULT-VALUE>2</DEFAULT-VALUE>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-FLOAT-PARAM-DEF UUID="ECUC:2e258b97-f1d9-4dc1-ad1a-dbdc0445568b">
+											<SHORT-NAME>PwmDutyCycle</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Value of duty cycle used for Initialization. &lt;BR/&gt;
+This value is an integer represents the percentage. &lt;BR/&gt;
+0, represents 0% &lt;BR/&gt;
+100, represents 100% &lt;BR/&gt;</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="iSoft::IdentifiableOptions">
+														<SD GID="CONTROL_NAME">Duty Cycle(%)</SD>
+														<SD GID="TRIGGER_FLAG">true</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>											
+											<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00124</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<MAX>100.0</MAX>
+											<MIN>0.0</MIN>
+											<DEFAULT-VALUE>0.0</DEFAULT-VALUE>
+										</ECUC-FLOAT-PARAM-DEF>
+										<ECUC-FLOAT-PARAM-DEF UUID="ECUC:2e258b97-f1d8-4dc1-ad1a-dbdc0445568b">
+											<SHORT-NAME>PwmDutyCycle_ms</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Value of duty cycle used for initialization in ms. &lt;BR/&gt;
+This value is calculated from the Default Period and Duty Cycle percentage. &lt;BR/&gt;
+It is for display only, and users cannot modify. &lt;BR/&gt;</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="iSoft::IdentifiableOptions">
+														<SD GID="CONTROL_NAME">Duty Cycle(ms)</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>											
+											<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00124</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<MAX>Inf</MAX>
+											<MIN>0</MIN>
+											<DEFAULT-VALUE>0.0</DEFAULT-VALUE>
+										</ECUC-FLOAT-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="ECUC:daa5c051-75d5-4a20-8b6a-ca34afab4ddd">
+											<SHORT-NAME>PwmDefaultPeriod_ticks</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Default Period of the channel. Input Value in absolute ticks. &lt;BR/&gt;
+This parameter does not impact the channels of class PWM_FIXED_PERIOD_SHIFTED, PWM_FIXED_PERIOD_CENTER_ALIGNED and PWM_FIXED_PERIOD_ZERO_SHIFTED. &lt;BR/&gt;</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="iSoft::IdentifiableOptions">
+														<SD GID="CONTROL_NAME">Default Period(ticks)</SD>
+														<SD GID="TRIGGER_FLAG">true</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>											
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">0, represents 0% 
+                                                0x8000 represents 100%</L-1>
+												</P>
+											</INTRODUCTION>
+											<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00138</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<MAX>65534</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: PwmIdleState -->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="ECUC:7cc25f83-b89c-4ba0-8766-7ba087185c97">
+											<SHORT-NAME>PwmIdleState</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">The parameter PWM_IDLE_STATE represents the output state of the PWM after the signal is stopped (e.g. call of Pwm_SetOutputToIdle).</L-2>
+											</DESC>
+											<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00122</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:7e41f2f0-b929-9a3a-591c-b8592f55531b">
+													<SHORT-NAME>PWM_HIGH</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:1abdaea8-9f44-91b9-51cb-562553848260">
+													<SHORT-NAME>PWM_LOW</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+											<DEFAULT-VALUE>PWM_HIGH</DEFAULT-VALUE>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: PwmNotification -->
+										<ECUC-FUNCTION-NAME-DEF UUID="ECUC:44bb38ac-d409-4b1d-96be-ec84466c1019">
+											<SHORT-NAME>PwmNotification</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Definition of the Callback function.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="iSoft::IdentifiableOptions">
+														<SD GID="CONTROL_NAME">Notification</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>											
+											<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00123</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>"NULL"</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+											<DEFAULT-VALUE>NULL_PTR</DEFAULT-VALUE>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="ECUC:3a0e3f14-a2b9-428e-9b76-6a361c8b2ea5">
+											<SHORT-NAME>PwmShiftValue</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">FR: Shift Value for PWM_FIXED_PERIOD_SHIFTED Signal. &lt;BR/&gt;
+Valid only when Channel Class is PWM_FIXED_PERIOD_SHIFTED. &lt;BR/&gt;</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="iSoft::IdentifiableOptions">
+														<SD GID="CONTROL_NAME">Shift Value(%)</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>											
+											<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00137</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<MAX>32768</MAX>
+											<MIN>0</MIN>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: PwmPeriodDefault -->
+										<ECUC-FLOAT-PARAM-DEF UUID="ECUC:2e258b97-f1d8-4dc0-ad1a-dbdc0445568b">
+											<SHORT-NAME>PwmDefaultPeriod_ms</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Value of period used for Initialization.(in seconds).</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="iSoft::IdentifiableOptions">
+														<SD GID="CONTROL_NAME">Default Period(ms)</SD>
+														<SD GID="TRIGGER_FLAG">true</SD>
+														<SD GID="FIX_FLAG">true</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>											
+											<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00124</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<MAX>Inf</MAX>
+											<MIN>0</MIN>
+											<DEFAULT-VALUE>3</DEFAULT-VALUE>
+										</ECUC-FLOAT-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: PwmPolarity -->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="ECUC:a31896f1-a4ab-4dc8-a116-aff3df41810f">
+											<SHORT-NAME>PwmPolarity</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Defines the starting polarity of each PWM channel.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="iSoft::IdentifiableOptions">
+														<SD GID="CONTROL_NAME">Polarity</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>											
+											<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00125</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:cbe42fc7-c8ac-961d-6761-7d9c350a764e">
+													<SHORT-NAME>HIGH</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:6dd1c8a6-e8d0-966a-47b0-8336609c60b3">
+													<SHORT-NAME>LOW</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+											<DEFAULT-VALUE>LOW</DEFAULT-VALUE>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:7ee4dbf7-92ca-43f8-bedf-cd012b1d5f03">
+											<SHORT-NAME>PwmCoherentUpdate</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Setting this parameter to true determines the number of cells for       a particulat class channel.    &lt;BR/&gt;   PWM_VARIABLE_PERIOD = 5(true), 3 (false)  &lt;BR/&gt;     PWM_FIXED_PERIOD = 4(true), 3 (true)  &lt;BR/&gt;     PWM_FIXED_PERIOD_SHIFTED = 3 (true), 2 (false)  &lt;BR/&gt;     PWM_FIXED_PERIOD_CENTER_ALIGNED = 4 (true), 2 (true)   &lt;BR/&gt;    PWM_FIXED_PERIOD_ZERO_SHIFTED = 2 (true), &lt;BR/&gt; Not permitted (false) &lt;BR/&gt;</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="iSoft::IdentifiableOptions">
+														<SD GID="CONTROL_NAME">Coherent Update</SD>
+														<SD GID="TRIGGER_FLAG">true</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>											
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">* true: enabled (ON).
+		                                        * false: disabled (OFF).</L-1>
+												</P>
+											</INTRODUCTION>
+											<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00131</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-REFERENCE-DEF UUID="ECUC:c945dd5e-1a5b-4bcc-a8ab-0a4d19ec3587">
+											<SHORT-NAME>PwmHardwareChannel</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">FR: The required LTC resource of a channel. &lt;BR/&gt;
+Choose last LTC resource for the channel. For example PWM_FIXED_PERIOD channel class (PwmDutycycleUpdatedEndperiod is set to false): &lt;BR/&gt;
+It requires three cells, if the user intends to use LTC0, LTC1 and LTC2.  Assign LTC02 as the PwmAssignedHwUnit. &lt;BR/&gt;
+If PwmDutycycleUpdatedEndperiod is set to true then for PWM_FIXED_PERIOD channel class, the channel needs four cells. if the user intends to use LTC0, LTC1 , LTC2 and LTC3, then assign LTC03 as PwmAssignedHwUnit.
+</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="iSoft::IdentifiableOptions">
+														<SD GID="CONTROL_NAME">Hardware Channel</SD>
+														<SD GID="TRIGGER_FLAG">true</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>											
+											<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00148</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>ECU</SCOPE>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/Mcu/GptaConfiguration/Gpta/LTCGroup/LTC</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+										<ECUC-REFERENCE-DEF UUID="ECUC:c945dd5e-1a5b-4bcc-a8ab-0a4d19ec3586">
+											<SHORT-NAME>PwmReferenceChannel</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">FR: Reference channel for PWM_FIXED_PERIOD_SHIFTED, PWM_FIXED_PERIOD_CENTER_ALIGNED and PWM_FIXED_PERIOD_ZERO_SHIFTED channels. &lt;BR/&gt;
+Reference should be a channel of PWM_FIXED_PERIOD Only. &lt;BR/&gt;</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="iSoft::IdentifiableOptions">
+														<SD GID="CONTROL_NAME">Reference Channel</SD>
+														<SD GID="TRIGGER_FLAG">true</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>											
+											<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00148</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>ECU</SCOPE>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/Pwm/PwmChannelConfigSet/PwmChannel</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+										<!-- Reference Definition: PwmMcuClockReferencePoint
+										<ECUC-REFERENCE-DEF UUID="ECUC:c945dd5e-1a5b-4bcc-a8ab-0a4d19ec3585">
+											<SHORT-NAME>PwmMcuClockReferencePoint</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter contains reference to the McuClockReferencePoint</L-2>
+											</DESC>
+											<RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Pwm_00147</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>ECU</SCOPE>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+										 -->
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>
+<!-- ISoft-Module-Version:2.0.1 -->
